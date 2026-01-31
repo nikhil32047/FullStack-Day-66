@@ -1,0 +1,58 @@
+Day 66:
+==========
+
+How to Declare Variables in JavaScript
+============================================
+A variable is a container used to store data values.
+JavaScript provides three keywords to declare variables.
+
+a) Using var keyword
+===========================
+Introduced in older JavaScript (ES5)
+Function-scoped
+Can be redeclared & reassigned
+Hoisted (can be used before declaration)
+
+Example:
+var name = "Nikhil";
+var name = "Kumar";   // allowed
+name = "JavaScript";
+console.log(name);
+
+⚠️ Not recommended due to scope issues.
+
+
+b) Using let keyword
+==========================
+Introduced in ES6
+Block-scoped
+Cannot be redeclared
+Can be reassigned
+
+Example:
+let age = 22;
+age = 23;   // allowed
+// let age = 24; ❌ error
+console.log(age);
+
+✔ Preferred for most cases.
+
+
+c) Using const keyword
+============================
+Block-scoped
+Cannot be redeclared or reassigned
+Must be initialized at declaration
+
+Example:
+const country = "India";
+// country = "USA"; ❌ error
+console.log(country);
+
+✔ Best for fixed values.
+
+Quick Comparison
+Keyword	Scope	Redeclare	Reassign
+var	Function	✔	✔
+let	Block	❌	✔
+const	Block	❌	❌
